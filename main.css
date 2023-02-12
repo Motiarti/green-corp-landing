@@ -87,7 +87,7 @@ button {
 .form {
     display: flex;
     justify-content: center; 
-    align-items: center;
+    /*align-items: center;*/
     background-color: #1D263A;
     color: #fff;
     padding-top: 115px;
@@ -126,7 +126,6 @@ button {
     font-size: 18px;
     color: #213053;
     height: 60px;
-    /*0 сверху, 0 снизу, 20px справа и 20px слева*/
     padding: 0px 20px;
     border: none;
     border-radius: 15px;
@@ -135,7 +134,7 @@ button {
 }
 
 .form__submit {
-    height: 60px;
+    /*height: 60px;*/
     font-size: 18px;
     font-weight: 600;
     margin-top: 40px;
@@ -166,7 +165,7 @@ footer {
     margin-right: 80px;
 }
 
-.footer__group h3 {
+footer h3 {
     font-size: 16px;
     opacity: 0.7;
     padding-bottom: 30px;
@@ -180,9 +179,3 @@ footer {
 .footer__links a {
     margin-bottom: 15px;
 }
-
-/*Поправим стили заголовка: для заголовков h3 внутри группы ссылок сделайте размер текста 16px, прозрачность текста 0.7 (стиль opacity: 0.7), а также добавьте 
-внешний отступ снизу в 30px.
-Поправим то, что ссылки находятся на одной строке: сделайте контейнер ссылок (div с классом footer__links) flex-контейнером и измените направление расположения 
-элементов на column (flex-direction: column)
-Добавим отступы между ссылками: добавьте ссылкам внутри группы ссылок (тег a внутри элемента с классом footer__links) внешний отступ снизу в 15px.*/
