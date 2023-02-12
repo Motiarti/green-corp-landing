@@ -9,6 +9,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 a {
@@ -60,6 +64,12 @@ button {
 .about__sun-image {
     width: 100px;
     height: 100px;
+    /*animation-name: rotation 10s linear infinite;*/
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
 }
 
 .about h1 {
@@ -86,7 +96,7 @@ button {
 
 .form {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     /*align-items: center;*/
     background-color: #1D263A;
     color: #fff;
@@ -122,7 +132,8 @@ button {
     margin-bottom: 20px;
 }
 
-.form input, .form select {
+.form input,
+.form select {
     font-size: 18px;
     color: #213053;
     height: 60px;
@@ -151,10 +162,12 @@ footer {
     font-size: 16px;
     font-weight: 600;
 }
+
 .footer__container {
     display: flex;
     justify-content: center;
 }
+
 .footer__copyright {
     margin-top: 40px;
     text-align: center;
@@ -178,4 +191,99 @@ footer h3 {
 
 .footer__links a {
     margin-bottom: 15px;
+}
+
+@keyframes rotation {
+
+    /*
+    0% {
+        transform: rotate(0deg)
+    }
+    */
+    100% {
+        transform: rotate(100deg)
+    }
+}
+
+/*Отступ для иконки стрелки на кнопке "Узнать подробнее". Иконка и класс из библы https://fontawesome.com/*/
+.fa-solid {
+    margin-left: 5px;
+}
+
+/*Анимация https://animate.style/*/
+.animate__fadeInLeft,
+.animate__fadeInRight {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+/*Мобильные устройства*/
+@media (max-width: 720px) {
+    header {
+        padding: 10px;
+    }
+
+    .header__logo {
+        height: 20px;
+    }
+
+    header a {
+        margin-right: 10px;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 50px 10px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+
+    .form {
+        padding: 50px 10px;
+    }
+
+    .form h1 {
+        font-size: 36px;
+    }
+
+    footer {
+        padding: 50px 10px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+}
+
+/*Планшеты*/
+@media (max-width: 1024px) {
+    .about {
+        padding: 115px 20px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
 }
