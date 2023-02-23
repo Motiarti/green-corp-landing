@@ -97,6 +97,7 @@ button {
 
 .cards {
     display: grid;
+    background: #FFFFFF;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 50px;
@@ -147,7 +148,7 @@ button {
 
 .features__feedback {
     display: flex;
-    justify-content: center;
+    
 }
 
 .features__feedback-left {
@@ -158,17 +159,11 @@ button {
     font-size: 48px;
 }
 
-/*Внутри абзаца в левой части (тег p) у текста должен быть размер 18px, высота строчки 26px, а также полупрозрачность 70% (opacity: 0.7).*/
-
 .features__feedback-left p {
     font-size: 18px;
     line-height: 26px;
     opacity: 0.7;
 }
-
-/*
-У правой карточки (features__rate-box) цвет фона #1D263A, цвет тени rgb(29 38 58 / 20%). Тень должна на 6px отступать вниз, на 0px горизонтально и иметь 0 размытие.
-У правой карточки цвет звезд равен #ff7039. */
 
 .stars {
     color: #ff7039;
@@ -226,12 +221,12 @@ button {
    margin-right: 10px;
 } 
 
-.container__button {
+.promo__button-container {
     display: flex;
     justify-content: center;
 }
 
-.container__button button{
+.promo__button-container button{
     background-color: #107b1c;
     margin-top: 20px;
     font-size: 18px;
@@ -249,9 +244,6 @@ button {
 }
 
 .promo__image {
-    display: flex;
-    align-items: center;
-    justify-items: center;
     background: url('img/promo.jpg');
     background-position: center;
     width: 50%;
@@ -261,9 +253,7 @@ button {
 
 .promo__right {
     background-color: #dd5f26;
-    background-position: cover;
     padding: 160px 60px;
-    width: 50%;
 }
 
 .form__container {
@@ -427,7 +417,6 @@ footer h3 {
     }
 
     .promo {
-        display: flex;
         flex-direction: column-reverse;
     }
 
@@ -438,29 +427,31 @@ footer h3 {
 
     .promo__right {
         padding: 50px 10px;
-        width: 100%;
     }
 
     .cards {
         grid-template-columns: auto;
     }
 
+    .features {
+        padding: 50px 10px;
+    }
+
     .features__feedback {
-        display: flex;
         flex-direction: column;
     }
 
     .features__feedback-left {
-        margin-right: 0px;
+        margin-right: 0;
     }
 
-    .features__feedback-left h2 {
+    .features__feedback-left h2, .features__box h3 {
         font-size: 36px;
     }
 
     .features__feedback-right {
-        display: flex;
         flex-direction: column;
+        align-items: initial;
     }
 
     .features__savings-box {
